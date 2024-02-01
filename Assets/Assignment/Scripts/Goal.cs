@@ -7,6 +7,8 @@ public class Goal : MonoBehaviour
 
     int direction = 1;
     public float speed;
+    public GameObject ballPrefab; //reference the prefab
+    public Transform spawn; //and the spawn
     // Start is called before the first frame update
     void Start()
     {
@@ -24,5 +26,10 @@ public class Goal : MonoBehaviour
         }
         transform.Translate(Vector2.right * speed * direction * Time.deltaTime); //move the goal left and right
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Instantiate(ballPrefab, spawn.position, spawn.rotation); //spawn a ball in the score pool when the goal is hit
     }
 }

@@ -100,6 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strength: 10
+  ballPrefab: {fileID: 1068755617847301631}
+  spawn: {fileID: 0}
 --- !u!58 &5960241943778789059
 CircleCollider2D:
   m_ObjectHideFlags: 0
